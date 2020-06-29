@@ -2,6 +2,7 @@ from pywinauto.application import Application
 import math
 from decimal import Decimal
 import numpy as np
+from termcolor import colored
 
 #Путь к файлу
 path = "C:\\Projects\\CalculatorAutoTest\\"
@@ -39,9 +40,9 @@ for n in joinedList:
     textResult = 'Ввод - ' + str(n) + ', ln10, ' + str(resultApp) + ' | ' + str(resultMath)
 
     if resultApp == resultMath:
-        print(textResult + ' OK')
+        print(textResult + colored(' OK', 'green'))
     else:
         report.write(textResult + ' ERROR' "\n")
-        print(textResult + ' ERROR')
+        print(textResult + colored(' ERROR', 'red'))
 
 report.close()
