@@ -40,11 +40,11 @@ for n in joinedList:
     #Вывод результата
     textResult = 'Ввод - ' + str(n) + ', log10, ' + str(resultApp) + ' | ' + str(resultMath)
 
-    if resultApp == resultMath:
-        print(textResult + colored(' OK', 'green'))
+    if app_result == math_result:
+        print(text_result + ' ' + colored('OK', 'green'))
     else:
-        report.write(textResult + ' ERROR' "\n")
-        print(textResult + colored(' ERROR', 'red'))
+        report.write('Error {}\n'.format(textResult))
+        print(text_result + ' ' + colored('ERROR', 'red'))
 
 #Проверка "Square"
 print("-----SQRT-----")
